@@ -1,0 +1,20 @@
+<section style="height: 100vh; display: flex; justify-content: center;align-items: center;">
+<div>
+    <form action="" [formGroup]="loginForm" (ngSubmit)="submit()">
+        <div class="Formitem">
+            email <br>
+            <input type="text" formControlName="email" placeholder="Email">
+        </div>
+        <div class="Formitem">
+            password <br>
+            <input type="password"formControlName="password" placeholder="Enter Password">
+        </div>
+        <div class="Formitem">
+            <button type="submit">
+                Login
+            </button>
+        </div>
+       
+    </form>
+</div>
+</section>
