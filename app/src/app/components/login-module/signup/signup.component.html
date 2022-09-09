@@ -1,0 +1,31 @@
+<section style="height: 100vh; display: flex; justify-content: center;align-items: center; background:linear-gradient(30deg, rgb(76, 57, 107),rgba(66, 66, 197, 0.678),rgb(80, 46, 112))">
+    <div class="formdiv">
+        <div style="font-size:xx-large;text-align: center; color: rgba(25, 41, 49, 0.774);">Sign-up Form</div>
+        <form action="">
+            <div class="Formitem">
+                Email <br>
+                <input type="text" formControlName="email" placeholder="Email">
+            </div>
+            <div class="Formitem">
+                Password <br>
+                <input type="password"formControlName="password" placeholder="Enter Password">
+                
+            </div>
+            <div class="Formitem">
+                Confirm-Password <br>
+                <input type="password"formControlName="password" placeholder="Re-enter Password">
+                
+            </div>
+            <div class="Formitem submitdiv">
+                <button type="submit">
+                    Sign-up
+                </button>
+            </div>
+            <div class="Formitem ">
+                Already Have an Account? 
+                <a routerLink="/login" style="color:blue">Sign in!</a>
+            </div>
+           
+        </form>
+    </div>
+    </section>
