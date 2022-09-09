@@ -1,0 +1,47 @@
+
+.Formitem{
+    padding-bottom: 15px;
+    padding-inline: 30px;
+
+    // border: 1px solid black;
+}
+input{
+    margin: 3px;
+    outline: none;
+    // border: 1px solid rgba(0, 0, 0, 0.397);
+    border: none;
+    border-radius: 5px;
+    border-bottom: 1px solid rgba(32, 32, 32, 0.404);
+    height: 30px;
+    padding: 3px;
+    background: linear-gradient(60deg,rgba(0, 0, 0, 0.062), rgba(0, 0, 0, 0.212),rgba(0, 0, 0, 0.212));
+    color: rgba(2, 2, 2, 0.692);
+}
+input::placeholder{
+    color: rgba(2, 2, 2, 0.692);
+}
+button{
+    background-color: rgba(44, 94, 117, 0.144);
+    border: none;
+    height: 30px;
+    width: 100px;
+    font-size: large;
+    border-radius: 100vmax;
+    color: rgb(59, 59, 59);
+    border: 1px solid rgba(0, 0, 0, 0.459);
+}
+button:hover{
+    cursor:pointer;
+}
+    .red{
+    color: rgba(177, 0, 0, 0.63);
+}
+form{
+    background-color: rgba(44, 44, 44, 0.123);
+    padding: 40px;
+    border-radius: 5px;
+}
+.submitdiv{
+    display: flex;
+    justify-content: center;
+}

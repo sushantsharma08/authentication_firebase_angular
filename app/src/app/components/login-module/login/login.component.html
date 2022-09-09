@@ -1,0 +1,35 @@
+<section style="height: 100vh; display: flex; justify-content: center;align-items: center; background:linear-gradient(30deg, rgb(76, 57, 107),rgba(66, 66, 197, 0.678),rgb(80, 46, 112))">
+    
+    <div class="formdiv">
+        <div style="font-size:xx-large;text-align: center; color: rgba(25, 41, 49, 0.774);">Login Form</div>
+    <form action="" [formGroup]="loginForm" (ngSubmit)="submit()">
+        <div class="Formitem">
+            Email <br>
+            <input type="text" formControlName="email" placeholder="Email">
+
+            <div class="red" *ngIf="email?.errors?.['email']&& email?.touched">
+                Enter a Valid Email
+            </div>
+            <div class="red" *ngIf="email?.errors?.['required']&& email?.touched">
+                Enter an Email
+            </div>
+        </div>
+        <div class="Formitem">
+            Password <br>
+            <input type="password"formControlName="password" placeholder="Enter Password">
+            <div class="red" *ngIf="password?.errors?.['required']&& password?.touched">
+                Enter an password
+            </div>
+        </div>
+        <div class="Formitem submitdiv">
+            <button type="submit">
+                Login
+            </button>
+        </div>
+        <div class="Formitem ">
+            New to the Page? <a routerLink="/sign-up">Sign up!</a>
+        </div>
+       
+    </form>
+</div>
+</section>
