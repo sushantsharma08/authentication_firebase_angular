@@ -1,20 +1,45 @@
 <section style="height: 100vh; display: flex; justify-content: center;align-items: center; background:linear-gradient(30deg, rgb(76, 57, 107),rgba(66, 66, 197, 0.678),rgb(80, 46, 112))">
-    <div class="formdiv">
+    <div class="formdiv" >
         <div style="font-size:xx-large;text-align: center; color: rgba(25, 41, 49, 0.774);">Sign-up Form</div>
-        <form action="">
+        <form action="" [formGroup]="signupForm" (ngSubmit)="submit()">
+            <div class="Formitem">
+                name <br>
+                <input type="text" formControlName="name" placeholder="name">
+    
+                <div class="red" *ngIf="name?.errors?.['name']&& name?.touched">
+                    Enter a Valid name
+                </div>
+                <div class="red" *ngIf="name?.errors?.['required']&& name?.touched">
+                    Enter an name
+                </div>
+            </div>
             <div class="Formitem">
                 Email <br>
                 <input type="text" formControlName="email" placeholder="Email">
+                <div class="red" *ngIf="email?.errors?.['email']&& email?.touched">
+                    Enter a Valid Email
+                </div>
+                <div class="red" *ngIf="email?.errors?.['required']&& email?.touched">
+                    Enter an Email
+                </div>
             </div>
             <div class="Formitem">
                 Password <br>
-                <input type="password"formControlName="password" placeholder="Enter Password">
+                <input type="password" formControlName="password" placeholder="Enter Password" required>
+                <div class="red" *ngIf="password?.errors?.['required']&& password?.touched">
+                    Enter an password
+                </div>
                 
             </div>
             <div class="Formitem">
                 Confirm-Password <br>
-                <input type="password"formControlName="password" placeholder="Re-enter Password">
-                
+                <input type="password"formControlName="confirmPassword" placeholder="Re-enter Password">
+                <div class="red" *ngIf="confirmPassword?.errors?.['required']&& confirmPassword?.touched">
+                    confirm password is requiured
+                </div>
+            </div>
+            <div class="red" style="margin-bottom:5px; text-align: center;" *ngIf="signupForm.errors?.['passwordsDontmatch']">
+                Passwords dont Match
             </div>
             <div class="Formitem submitdiv">
                 <button type="submit">
@@ -27,5 +52,6 @@
             </div>
            
         </form>
+
     </div>
     </section>
