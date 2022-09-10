@@ -16,7 +16,7 @@ const routes: Routes = [
     path:'sign-up' , component:SignupComponent
   },
   {  path: '',
-  loadChildren: () => import('../routed-components/routed-components.module').then(m => m.RoutedComponentsModule)
+  loadChildren: () => import('../constants/constants.module').then(m => m.ConstantsModule)
 }
 ]
 

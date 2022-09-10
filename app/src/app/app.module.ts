@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
+import { HotToastModule } from '@ngneat/hot-toast';
 // import { AngularFireModule } from '@angular/fire';
 
 
@@ -17,6 +18,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
+    HotToastModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
