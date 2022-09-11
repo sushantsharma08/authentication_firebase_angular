@@ -21,6 +21,7 @@
     "@angular/router": "~13.0.0-next.0",
     "@ngneat/hot-toast": "^4.1.0",
     "@ngneat/overview": "^3.0.0",
+    "bootstrap": "^5.2.1",
     "firebase": "^9.9.3",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
