@@ -17,7 +17,7 @@ const routes: Routes = [
   {
     path:'sign-up' , component:SignupComponent
   },
-  {  path: '',
+  {  path: 'home',
   loadChildren: () => import('../constants/constants.module').then(m => m.ConstantsModule), canActivate:[AuthGuard]
 }
 ]

@@ -26,31 +26,17 @@ export class AuthenticationService {
   login(email: string, password: string): Observable<any> {
    this.auth.currentUser?.getIdToken(true).then(function (idToken){
     console.log(idToken);
-    localStorage.setItem("token",idToken)
-   })
-
-  //  currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) 
+    localStorage.setItem("token",idToken);
+    console.log(idToken);
     
-    
-    
-
-    return from(signInWithEmailAndPassword(this.auth, email, password)
-   );
+   });
+    return from(signInWithEmailAndPassword(this.auth, email, password));
   }
   signup(name: string, email: string, password: string,) {
     return from(createUserWithEmailAndPassword(this.auth, email, password)).pipe(switchMap(({ user }) => updateProfile(user, { displayName: name })));
   }
-  // updateProfileData(profileData: Partial<UserInfo>): Observable<any> {
-  //   const user = this.auth.currentUser;
-  //   return of(user).pipe(
-  //     concatMap((user) => {
-  //       if (!user) throw new Error('Not Authenticated');
-
-  //       return updateProfile(user, profileData);
-  //     })
-  //   );
-  // }
   logout() {
+    localStorage.clear();
     return from(this.auth.signOut());
   }
 }

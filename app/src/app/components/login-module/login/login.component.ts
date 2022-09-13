@@ -33,7 +33,6 @@ export class LoginComponent implements OnInit {
 
   submit(){
     if(this.loginForm.invalid){
-      
       return;
     }
 
@@ -47,11 +46,8 @@ export class LoginComponent implements OnInit {
       loading:"loading...",
       error:"there was an error"
     }))
-    
     .subscribe(() =>{
       this.router.navigate(['home']);
-    });
-
-    
+    })
   }
 }
