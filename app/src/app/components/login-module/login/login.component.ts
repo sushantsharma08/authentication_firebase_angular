@@ -33,7 +33,6 @@ export class LoginComponent implements OnInit {
 
   submit(){
     if(this.loginForm.invalid){
-      console.log("wrong creds");
       
       return;
     }
