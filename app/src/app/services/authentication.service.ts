@@ -24,9 +24,6 @@ export class AuthenticationService {
 
 
   login(email: string, password: string): Observable<any> {
-    console.log(this.auth.currentUser?.getIdToken);
-    console.log(this.auth.currentUser?.uid);
-
    this.auth.currentUser?.getIdToken(true).then(function (idToken){
     console.log(idToken);
     localStorage.setItem("token",idToken)
