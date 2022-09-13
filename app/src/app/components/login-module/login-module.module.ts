@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
+import { AuthGuard } from '../guard/auth.guard';
 
 const routes: Routes = [
   {
@@ -16,7 +17,7 @@ const routes: Routes = [
     path:'sign-up' , component:SignupComponent
   },
   {  path: '',
-  loadChildren: () => import('../constants/constants.module').then(m => m.ConstantsModule)
+  loadChildren: () => import('../constants/constants.module').then(m => m.ConstantsModule),
 }
 ]
 
